@@ -1,3 +1,6 @@
+.head
+	background: url(/img/content/bg_top.jpg) center center no-repeat
+
 .logo
 	+inlineblock(middle)
 	margin-right: 107px
@@ -27,13 +30,74 @@
 	margin-right: 64px
 
 .nav__link
+	position: relative
 	font-size: 16px
 	color: $white
+	transition: .3s
+
+	&:hover
+		color: $yellow
+
+		&:before, &:after
+			border-color: $yellow
+
+	&:before
+		content: ""
+		display: block
+		width: 4px
+		height: 4px
+		position: absolute
+		left: 100%
+		top: 50%
+		transform: rotate(-135deg)
+		margin-top: 2px
+		margin-left: 10px
+		border-right: 1px solid transparent
+		border-bottom: 1px solid transparent
+		transition: 0.3s
+
+	&:after
+		content: ""
+		display: block
+		width: 4px
+		height: 4px
+		position: absolute
+		left: 100%
+		top: 50%
+		transform: rotate(45deg)
+		margin-top: -2px
+		margin-left: 10px
+		border-right: 1px solid #fff
+		border-bottom: 1px solid #fff
+		transition: .3s
+
 .user
 	+inlineblock(middle)
 
-.user__login
+.user__login, .user__search
+	position: relative
+	border-radius: 50%
+	width: 42px
+	height: 42px
+	background: rgba(255, 255, 255, 0.1)
 	+inlineblock(middle)
 
+	&:hover
+		background: $yellow
+
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		border-radius: 50%
+		width: 100%
+		height: 100%
+
+.user__login
+	margin-right: 25px
+	&:before
+		background: url(/img/icons/user.png) center center no-repeat
+
 .user__search
-	+inlineblock(middle)
+	&:before
+		background: url(/img/icons/search.png) center center no-repeat
