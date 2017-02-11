@@ -1,19 +1,44 @@
 @font-face
-	font-family: 'fira_sansregular'
-	src: url("../fonts/firasans-regular-webfont.woff") format("woff"), url("../fonts/firasans-regular-webfont.svg#fira_sansregular") format("svg")
+	font-family: 'arialregular'
+	src: url('/fonts/arialregular-webfont.woff') format('woff'), url('/fonts/arialregular-webfont.svg#arialregular') format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'arialbold'
+	src: url('/fonts/arialbold-webfont.woff') format('woff'), url('/fonts/arialbold-webfont.svg#arialbold') format('svg')
 	font-weight: normal
 	font-style: normal
 
 
-=fira($style: regular)
+
+@font-face
+	font-family: 'arialitalic'
+	src: url('/fonts/arialitalic-webfont.woff') format('woff'), url('/fonts/arialitalic-webfont.svg#arialitalic') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+@font-face
+	font-family: 'als_malinaregular'
+	src: url('/fonts/malina-webfont.woff') format('woff'), url('/fonts/malina-webfont.svg#als_malinaregular') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+
+=arial($style: regular)
 	@if $style == regular
-		font-family: 'fira_sansregular'
+		font-family: 'arialregular'
 
 	@if $style == bold
-		font-family: 'fira_sansbold'
+		font-family: 'arialbold'
 
-	@if $style == light
-		font-family: 'fira_sanslight'
+	@if $style == italic
+		font-family: 'arialitalic'
 
-	@if $style == medium
-		font-family: 'fira_sansmedium'
+=milana($style: regular)
+	@if $style == regular
+		font-family: 'als_malinaregular'
+
+

@@ -1,0 +1,144 @@
+.slider__list
+	margin-bottom: 15px
+
+.slider__item
+	position: relative
+	@extend %clearfix
+
+	&:before
+		position: absolute
+		top: 152px
+		left: 50%
+		transform: translatex(-50%)
+		content: "пирожинка"
+		text-transform: uppercase
+		+milana
+		color: rgba(255, 255, 255, 0.1)
+		font-size: 150px
+
+.slider__info, .slider__pic, .slider__desc
+	float: left
+
+.slider__info
+	width: 132px
+	text-align: center
+	padding-top: 85px
+	margin-right: 51px
+
+.slider__ing-wrap
+	min-height: 272px
+
+.slider__pic
+	overflow: hidden
+	position: relative
+	width: 410px
+	margin-right: 100px
+
+.slider__desc
+	width: 407px
+
+.slider__ing-icon
+	display: inline-block
+	border-radius: 50%
+	width: 42px
+	height: 42px
+	margin-bottom: 9px
+	background: rgba(255, 255, 255, 0.1)
+	transition: .3s
+
+	&:before
+		content: ""
+		display: block
+		width: 100%
+		height: 100%
+		background-position: -180px -40px
+		// background: url(/img/icons/mixer.png) center center no-repeat
+
+	&:hover
+		background: $yellow
+		&:before
+			background-position: -206px -78px
+			// background: url(/img/icons/mixer_hov.png) center center no-repeat
+
+
+.slider__ing-text
+	display: inline-block
+	font-size: 15px
+	+arial
+	color: $white
+	margin-bottom: 20px
+
+.store__text
+	+arial
+	color: rgba(255, 255, 255, 0.28)
+	font-size: 13px
+
+
+.store__time
+	+milana
+	line-height: 16px
+	font-size: 24px
+	color: $white
+
+.slider__desc
+	position: relative
+	padding-top: 34px
+
+.slider-desc__title
+	+milana
+	line-height: 75px
+	font-size: 62px
+	color: $white
+	margin-bottom: 23px
+
+.slider-desc__text
+	+arial
+	font-size: 15px
+	color: $white
+	margin-bottom: 21px
+
+.slider-desc__price
+	+inlineblock(middle)
+	+milana
+	font-size: 62px
+	color: $white
+	margin-right: 42px
+
+.slider-desc__buy
+	+inlineblock(middle)
+	border-radius: 50px
+	background: $yellow
+	padding: 10px 23px
+	margin-top: 4px
+	transition: .3s
+
+	&:hover
+		background: #641a00
+
+		.slider-desc__buylink
+			color: $yellow
+
+.slider-desc__buylink
+	+arial(bold)
+	color: #a4151c
+	font-size: 14px
+	transition: .3s
+
+.slider-controls
+	text-align: center
+	margin-bottom: 45px
+
+.slider-controls__item
+	+inlineblock()
+	margin-right: 31px
+
+.slider-controls__link
+	display: block
+	width: 8px
+	height: 8px
+	background: $white
+	border-radius: 50px
+	transition: .3s
+
+	&:hover
+		background: $yellow
