@@ -1,0 +1,223 @@
+.team__section
+	padding-top: 84px
+	background: radial-gradient(at 50% 50%, #fbfbfb 40%, #c9c9c9 100%)
+	padding-bottom: 117px
+
+.team__header
+	@extend %clearfix
+	margin-bottom: 0px
+
+.team__header-title
+	float: left
+	width: 400px
+	width: 30%
+
+.team__header-list
+	float: right
+	width: 700px
+	width: 64%
+
+.team__header-item
+	position: relative
+	width: 230px
+	+inlineblock()
+	padding: 15px 28px 20px
+
+	&:after
+		position: absolute
+		left: 50%
+		bottom: -12px
+		margin-left: -20px
+		content: ""
+		display: block
+		border: 12px solid transparent
+		border-bottom-width: 0px
+		border-left-width: 20px
+		border-right-width: 20px
+
+
+	&:hover
+		background: #893213
+		border-radius: 20px
+		transition: background .3s
+
+		&:after
+			border-top-color: #893213
+			transition: .3s
+
+		.team__header-name
+			color: $yellow
+
+		.team__header-post
+			color: $white
+
+
+.team__header-name
+	+milana
+	font-size: 30px
+	color: $blue
+	margin-bottom: 3px
+	transition: .3s
+
+.team__header-post
+	+arial
+	font-size: 16px
+	color: #8d8d8d
+	transition: .3s
+
+
+.team__item
+	@extend %clearfix
+	position: relative
+	min-height: 610px
+
+.team__item-left, .team__item-pic, .team__item-right
+	float: left
+
+.team__item-left
+	width: 290px
+	padding-top: 50px
+
+	p
+		margin-bottom: 20px
+		+arial(italic)
+		font-size: 14pxm
+		color: #747474
+
+		&:last-child
+			color: #484848
+			+arial(bold)
+
+.team__item-pic
+	width: 470px
+	min-height: 610px
+	position: absolute
+	bottom: 0
+	left: 50%
+	transform: translatex(-50%)
+
+	&:before
+		position: absolute
+		left: 50px
+		top: 20px
+		content: ""
+		display: block
+		width: 50px
+		height: 40px
+		background: url(/img/content/quotes.png)
+
+
+.team__item-img
+	position: absolute
+	bottom: 0
+	left: 50%
+	transform: translate(-60%)
+	max-width: 100%
+	height: auto
+	display: block
+
+
+.team__item-right
+	width: 340px
+	padding-top: 50px
+	float: right
+
+	p
+		margin-bottom: 20px
+		+arial(italic)
+		font-size: 14px
+		color: #747474
+
+.form-wrap
+	text-align: center
+
+.form-block
+	font-size: 0
+	display: inline-block
+	width: 845px
+	height: 410px
+	border-radius: 30px
+	background: url(/img/content/bg_form.jpg)
+
+.form__left
+	+inlineblock(middle)
+	width: 435px
+	+milana
+	font-size: 64px
+	color: $white
+	margin: 0
+	line-height: 1.2
+
+.form__right
+	position: relative
+	+inlineblock(middle)
+	width: 410px
+	height: 410px
+	border-radius: 0 30px 30px 0
+	background: rgba(21, 19, 19, 0.84)
+	*
+		font-size: 16px
+
+.form__list
+	padding: 60px 87px 0 46px
+
+.form__item
+	margin-bottom: 23px
+	text-align: left
+
+.form__input
+	border: none
+	background: none
+	color: $white
+	outline: none
+	width: 100%
+	border-bottom: 1px solid $white
+	padding: 20px 0
+
+.checkbox
+	position: relative
+
+.form__checkbox
+	position: absolute
+	left: -150px
+	z-index: -1
+	&:checked + .checkbox__fake
+		+inlineblock(middle)
+		background-position: -150px -51px
+
+.checkbox__fake
+	+inlineblock(middle)
+	width: 12px
+	height: 12px
+	background: $white
+	border: 1px solid #000
+	margin-right: 6px
+
+
+.form__submit
+	position: absolute
+	right: 0
+	bottom: 0
+	margin: 0 -35px -35px 0
+	width: 96px
+	height: 96px
+	border: none
+	border-radius: 50%
+	background-color: $yellow
+	background-position: 15px 13px
+	transition: background-color .3s
+
+	&:hover
+		background: #9d5125 url(/img/icons/arrow_hov.png) no-repeat
+		background-position: 25px 23px
+
+
+
+
+
+
+.checkbox__text
+	+inlineblock(middle)
+	color: $white
+	padding: 10px 0
+
