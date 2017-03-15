@@ -21,7 +21,6 @@
 	position: relative
 	width: 230px
 	+inlineblock()
-	padding: 15px 28px 20px
 
 	&:after
 		position: absolute
@@ -35,8 +34,8 @@
 		border-left-width: 20px
 		border-right-width: 20px
 
-
-	&:hover
+	&.active
+		&:hover
 		background: #893213
 		border-radius: 20px
 		transition: background .3s
@@ -51,6 +50,9 @@
 		.team__header-post
 			color: $white
 
+.team__header-link
+	display: block
+	padding: 15px 28px 20px
 
 .team__header-name
 	+milana
@@ -70,6 +72,12 @@
 	@extend %clearfix
 	position: relative
 	min-height: 610px
+
+.team__item-content
+	display: none
+
+	&.active
+		display: block
 
 .team__item-left, .team__item-pic, .team__item-right
 	float: left
@@ -127,6 +135,9 @@
 		+arial(italic)
 		font-size: 14px
 		color: #747474
+
+
+
 
 .form-wrap
 	text-align: center

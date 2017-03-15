@@ -1,6 +1,6 @@
 .head
 	background-color: #a4161b
-	background: radial-gradient(10% bottom, #e44447,#a5161b 100%);
+	background: radial-gradient(10% bottom, #e44447,#a5161b 100%)
 
 .header
 	padding-top: 23px
@@ -40,22 +40,28 @@
 .nav__item
 	+inlineblock(middle)
 	margin-right: 66px
+	position: relative
 
 	&:last-child
 		margin-right: 25px
+
+	&:hover
+		.dropdown
+			left: 50%
+			margin-left: -115px
+			opacity: 1
+
+		.nav__link
+			color: $yellow
+
+			&:after
+				border-color: $yellow
+				transform: rotate(-135deg)
 .nav__link
-	position: relative
 	font-size: 16px
 	+arial
 	color: $white
 	transition: .3s
-
-	&:hover
-		color: $yellow
-
-		&:after
-			border-color: $yellow
-			transform: rotate(-135deg)
 
 	// &:before
 	// 	content: ""
@@ -86,6 +92,73 @@
 		border-right: 1px solid #fff
 		border-bottom: 1px solid #fff
 		transition: .3s
+
+.dropdown
+	position: absolute
+	left: -999999px
+	margin-top: 30px
+	width: 230px
+	border-radius: 20px
+	background: rgba(255, 255, 255, 0.92)
+	text-align: left
+	padding: 40px 48px
+	font-size: 16px
+	z-index: 100
+	opacity: 0
+	transition: opacity 0.3s
+
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		bottom: 100%
+		left: 0
+		right: 0
+		height: 40px
+
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		bottom: 100%
+		left: 50%
+		margin-left: -20px
+		border: 16px solid transparent
+		border-left-width: 20px
+		border-right-width: 20px
+		border-top-width: 0
+		border-bottom: 12px solid rgba(255, 255, 255, 0.92)
+
+.dropdown__item
+	margin-bottom: 20px
+	position: relative
+
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		right: 100%
+		margin-right: 28px
+		border: 10px solid transparent
+		transition: .3s
+
+
+	&:hover
+		&:before
+			border-left-color: $yellow
+
+		.dropdown__link
+			+arial(bold)
+
+
+	&:last-child
+		margin-bottom: 0
+
+
+
+.dropdown__link
+	+arial()
+	color: #575757
 
 .pointer-none
 	&:after
@@ -126,5 +199,3 @@
 	&:before
 		background-position: -65px -156px
 		// background: url(/img/icons/search.png) center no-repeat
-
-

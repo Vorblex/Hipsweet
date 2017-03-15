@@ -2,7 +2,6 @@
 /fonts_ttf/
 /dist/
 /app/css/
-/app/js/
 /app/libs/
 /**/*.psd
 /**/*.md

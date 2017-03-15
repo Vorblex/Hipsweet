@@ -41,6 +41,24 @@
 .slider__desc
 	width: 407px
 
+.slider__icon-wrap
+	position: relative
+	display: block
+	&:hover
+		.slider__ing-icon
+			background: $yellow
+			&:before
+				background-position: -206px -78px
+			&:after
+				right: 0
+				opacity: 1
+				transition: opacity 0.3s
+		.slider__ing-table
+			left: 100%
+			opacity: 1
+			transition: opacity 0.3s
+
+
 .slider__ing-icon
 	display: inline-block
 	border-radius: 50%
@@ -58,11 +76,57 @@
 		background-position: -180px -40px
 		// background: url(/img/icons/mixer.png) center center no-repeat
 
-	&:hover
-		background: $yellow
-		&:before
-			background-position: -206px -78px
+
 			// background: url(/img/icons/mixer_hov.png) center center no-repeat
+
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		left: -9999px
+		top: 50%
+		margin-top: -43px
+		border: 16px solid transparent
+		border-top-width-width: 20px
+		border-bottom-width: 20px
+		border-left-width-width: 0
+		border-right: 12px solid rgba(255, 255, 255, 0.92)
+		opacity: 0
+
+.slider__ing-table
+	position: absolute
+	left: -9999px
+	top: 50%
+	margin-top: -122px
+	width: 380px
+	height: 244px
+	border-radius: 20px
+	background: rgba(255, 255, 255, 0.92)
+	z-index: 100
+	padding: 40px 30px
+	opacity: 0
+	text-align: left
+
+
+.table__img
+	width: 25px
+	height: 30px
+
+
+.table__img_mol
+	background-position: -218px -125px
+
+.table__img_eg
+	background-position: -150px -75px
+
+.table__img_shu
+	background-position: -114px -167px
+
+.table__img_bu
+	background-position: -151px -5px
+
+.table__img_mil
+	background-position: -196px -6px
 
 
 .slider__ing-text
@@ -145,6 +209,37 @@
 	background: $white
 	border-radius: 50px
 	transition: .3s
+
+	&:hover
+		background: $yellow
+
+
+// slider
+
+.bx-prev, .bx-next
+	display: none
+
+.bx-pager
+	text-align: center
+	margin-bottom: 45px
+
+.bx-pager-item
+	display: inline-block
+	margin-right: 31px
+
+
+
+.bx-pager-link
+	display: inline-block
+	width: 8px
+	height: 8px
+	background: $white
+	border-radius: 50px
+	transition: .3s
+	font-size: 0
+
+	&.active
+		background: $yellow
 
 	&:hover
 		background: $yellow

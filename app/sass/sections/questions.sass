@@ -1,8 +1,16 @@
 .questions__section
-	background: radial-gradient(at 10% 80%, #e54347 45%, #a7181d 100%)
+	background: linear-gradient(to top right, rgba(212, 0, 5, 0.75), rgba(171, 0, 7, 0.75)),
+	url(/img/questionsBG/bgq7.png) 0% -20% no-repeat,
+	url(/img/questionsBG/bgq1.png) 0% 160% no-repeat,
+	url(/img/questionsBG/bgq2.png) 10% 15% no-repeat,
+	url(/img/questionsBG/bgq6.png) 70% -85% no-repeat,
+	url(/img/questionsBG/bgq4.png) 100% 10% no-repeat,
+	url(/img/questionsBG/bgq3.png) 100% 130% no-repeat,
+	url(/img/questionsBG/bgq5.png) 60% 5% no-repeat, rgba(255,255,255, 1)
 
 .questions__container
 	padding: 81px 0 90px 0
+	min-height: 760px
 
 .questions__title
 	font-size: 40px
@@ -10,10 +18,10 @@
 	text-align: center
 	margin-bottom: 56px
 
-.quetions__list
-	max-width: 894px
+.questions__list
+	max-width: 992px
 	margin: 0 auto
-	list-style-type: decimal
+
 
 .questions__item
 	list-style-type: decimal
@@ -21,6 +29,7 @@
 	+arial
 	color: $white
 	margin-bottom: 43px
+	transition: color .3s
 
 	&:last-child
 		margin-bottom: 0
@@ -30,11 +39,23 @@
 		+arial
 		color: $white
 		padding-left: 47px
+		display: none
 
-.questions__item-title
+	&.active
+		color: $yellow
+
+		.questions__item-link
+			color: $yellow
+			border-bottom: none
+
+
+.questions__item-link
 	font-size: 22px
 	+arial()
 	color: $white
 	margin-bottom: 5px
 	border-bottom: dashed 3px $white
+	transition: color .3s
 
+.questions__content
+	padding: 9px 0 0 0
